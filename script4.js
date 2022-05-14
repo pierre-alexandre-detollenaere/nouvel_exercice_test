@@ -35,6 +35,48 @@ function afficher_alert(){
 14 on affiche dans la div le contenue du "Le prix est  : " champs texte La TVA est champs texte*1.2
 */
 
+
+// CODE QUI FAIT L EQUIVALENT DE onclick="fboutton()" EN HTML EN JS
+// EN HTML ON A ONCLICK SITUE A L EMPLACEMENT DU BOUTON
+// document le code HTML | l identifiant du composant HTML ici : monboutton
+//mouseover
+// EX 1 :
+
+// comment je peux afficher le nombre de 1 à 100
+// LES BOUCLES de 0 à 100
+// le nombre de ma boucle est 0
+// le nombre de ma boucle est 1
+// le nombre de ma boucle est 2
+// le nombre de ma boucle est 100
+
+// 
+
+/*
+1 REFAIRE L EXEMPLE DU COURS AFFICHER DANS UNE DIV LES CHIFFRE DE 0 A 9
+2 UN CHAMPS (INPUT) EN HTML QUI CONTIENT UN PASSWORD (internet code html) / creez une div
+3 LE JAVASCRIPT IL VA AFFICHE DANS UNE DIV LE TEXTE QUE VOUS AVEZ ECRIT DANS LE INPUT LORSQUE VOUS ECRIVEZ dans le champs  
+3.1 LE JAVASCRIPT IL VA AFFICHE DANS LA MEME DIV LE NOMBRE DE CARACTERE / x CARACTERES  
+3.2 LE JAVASCRIPT IL VA AFFICHE DANS LA MEME DIV SI VOUS AVEZ MOINS QUE 3 CARACTERES OU PLUS 10 CARACTERES CA 
+// AFFICHE MOT DE PASSE NON CONFORME 
+4 AU DEMARAGE DU SITE DEPUIS JAVASCRIPT VOUS ALLEZ AFFICHEZ 10 BOUTONS
+5 LORSQU ON CLIQUE SUR UN DES 10 BOUTON ON AFFICHE DANS UNE DIV EXTERIEUR LA TABLE DE MULTIPLICATION DE LA DIV
+
+
+*/
+
+
+for (   i=0; i<10;i++     )   { // BOUCLE : ON DEMMARE A 0 ; ARRET a 100 ; AUGMENTE DE 1
+    document.getElementById("div_texte").innerHTML=  document.getElementById("div_texte").innerHTML +  "<br /> le nombre de ma boucle est  " +  i // affiche dans la console le chiffre i
+}
+
+
+document.getElementById("monboutton").addEventListener("click",fboutton)
+
+
+document.getElementById("monboutton").addEventListener("mouseover",fboutton)
+//element.addEventListener("click", myFunction);
+
+
 function fboutton(){
     
     // affiche dans la div le contenue du champs texte
