@@ -328,6 +328,45 @@ function fnom(){
         }
 }
 
+/*1 Creez un champs texte avec l'identifiant  age
+ 2 CReez une div avec l'id dage
+ 3 Creez un evenement qui va se produire lorsque je vais presser (keyup) les touches sur 
+ le champs texte qui va declencher la fonction fage
+ 5 la fonction fage elle va verifier si il est >0 et <120 alors cela pourra 
+ l'age est conforme sinon cela ecrira  l'age doit être 0 et 120
+*/
 
+document.getElementById("age").addEventListener("keyup", fage)
 
+function fage(){
+    v_age=document.getElementById("age").value
+    if (v_age>0 && v_age<120){
+    document.getElementById("dage").innerHTML= "l'âge est conforme"
+    }
+    else{
+        document.getElementById("dage").innerHTML="l'âge n'est pas conforme"
+    }
+}
 
+/* 1 Creez un champs password avec l'identifiant  pwd1 et pwd2
+ 2 CReez une div avec l'id dpwd
+ 3 Creez un evenement qui va se produire lorsque je vais presser (keyup) les touches sur 
+ le champs texte pwd1 et pwd2 qui va declencher la fonction fpwd
+ 5 la fonction fpwd elle va verifier si le champs pwd1 et pwd2 sont identiques si 
+ c'est le cas cela affiche les mot de passes sont OK si non
+ Attention : les mots de passes ne sont pas identiques
+*/
+
+document.getElementById("pwd1").addEventListener("keyup", fpwd)
+document.getElementById("pwd2").addEventListener("keyup", fpwd)
+
+function fpwd(){
+    mdp1=document.getElementById("pwd1").value
+    mdp2=document.getElementById("pwd2").value
+    if (mdp1==mdp2){
+        document.getElementById("dpwd").innerHTML="les mots de passe sont OK"
+    }
+    else{
+    document.getElementById("dpwd").innerHTML="les mots de passe ne sont pas identiques"
+    }
+}
