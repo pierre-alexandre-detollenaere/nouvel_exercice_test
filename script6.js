@@ -370,3 +370,21 @@ function fpwd(){
     document.getElementById("dpwd").innerHTML="les mots de passe ne sont pas identiques"
     }
 }
+
+/* Exercice 11
+1 creer un champs texte avec l'id "mult". Creer une div avec l'id dmult
+2 Creer un evenement qui va se produire lorsque je vais passer (keyup) les touches sur 
+ce champs texte declenchant la fonction fmult
+3 la fonction fmult affiche les nombres dans la div de 1 à 10
+4 la fonction fmult affiche les nombres dans la div de 1 à 10 au nombre entré dans le champs
+texte
+*/
+
+document.getElementById("mult").addEventListener("keyup", fmult)
+
+function fmult(){
+    val_num=document.getElementById("mult").value
+    for(i=0;i<val_num;i++) {
+    document.getElementById("dmult").innerHTML=document.getElementById("dmult").innerHTML + " " + i
+    }
+}
