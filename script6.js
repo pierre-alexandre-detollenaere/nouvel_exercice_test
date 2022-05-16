@@ -276,10 +276,31 @@ function FB10(){
  3 Creer un evenement qui va se produire lorsque je vais presser (keyup) les touches sur
 le champs texte qui va déclencher la fonction fprenom
  4 la fonction fprenom elle va afficher dans la div dprenom le nom de la personne
+ 5 la fonction fprenom elle va afficher dans la div fprenom le nombre de caractere du
+ nom de la personne (length)
+ 6 Si le nombre de caractere est inferieur à 3 afficher dans la div "Attention :
+ votre prenom doit faire plus de 3 caracteres"
+ 7 Si le nombre de caractere est superieur à 10  afficher dans la div "Attention :
+ votre prenom doit faire moins de 10 caracteres"
  */
 
  document.getElementById("prenom").addEventListener("keyup", fprenom)
 
  function fprenom(){
-     document.getElementById("dprenom").innerHTML=document.getElementById("prenom").value
- }
+    document.getElementById("dprenom").innerHTML=document.getElementById("prenom").value
+    taille_prenom=document.getElementById("dprenom").innerHTML=document.getElementById("prenom").value.length
+    // on stocke dans la variable taille_prenom le nombre de caractères
+    if (taille_prenom<3){
+        document.getElementById("dprenom").innerHTML="Attention : votre prénom doit faire plus de 3 caractères"
+    }
+    if (taille_prenom>10){
+        document.getElementById("dprenom").innerHTML="Attention : votre prénom doit faire moins de 10 caractères"
+    }
+    if (taille_prenom>3 && taille_prenom<10) {
+        document.getElementById("dprenom").innerHTML="Votre prénom est conforme"
+    }
+ 
+}
+
+
+
