@@ -185,7 +185,7 @@ document.getElementById("btest5").addEventListener("click", fdiv)
 function fdiv(){
     console.log("vous avez bien cliqué sur le bouton")
     document.getElementById("madiv").innerHTML="vous avez bien cliqué sur le bouton"
-    document.getElementById("madiv").innerHTML=document.getElementById("test").value
+    document.getElementById("madiv").innerHTML="vous avez bien cliqué sur le bouton  " + document.getElementById("test").value
 }
 
 /*Exercice 7
@@ -201,7 +201,85 @@ document.getElementById("btest6").addEventListener("click",fdiv2)
 function fdiv2(){
     console.log("vous avez bien cliqué sur le bouton")
     document.getElementById("madiv2").innerHTML="vous avez bien cliqué sur le bouton"
-    document.getElementById("madiv2").innerHTML=document.getElementById("test").value
+    document.getElementById("madiv2").innerHTML="vous avez bien cliqué sur le bouton  " + document.getElementById("test").value
 }
 
 
+/*Exercice 8
+ 1 Creez une div en html avec l identifiant madiv3
+ 2 Creez un evenemement issue du dernier bouton au click lancant la fonction fdiv3
+ 3 la fonction fdiv3 affiche dans la console vous avez bien cliqué sur le bouton
+ 4 la fonction fdiv3 affiche dans la div vous avez bien cliqué sur le bouton
+ 5 la fonction fdiv3 dans la div affiche le contenu du champs texte
+*/
+
+document.getElementById("btest7").addEventListener("click",fdiv3)
+
+function fdiv3(){
+    console.log("vous avez bien cliqué sur le bouton")
+    document.getElementById("madiv3").innerHTML="vous avez bien cliqué sur le bouton"
+    document.getElementById("madiv3").innerHTML="vous avez bien cliqué sur le bouton  " + document.getElementById("test").value
+}
+
+/*Exercice 8
+ 1 Creez une div en html avec l identifiant madiv4
+ 2 Creez un evenement issue du dernier bouton au click lancant la fonction fdiv4
+ 3 la fonction fdiv4 affiche dans la console vous avez bien cliqué sur le bouton
+ 4 la fonction fdiv4 affiche dans la div vous avez bien cliqué sur le bouton
+ 5 la fonction fdiv4 dans la div affiche "vous avez bien cliqué sur le bouton" puis le contenue du champs texte
+ */
+
+ document.getElementById("btest8").addEventListener("click", fdiv4)
+
+ function fdiv4(){
+     console.log("vous avez bien cliqué sur le bouton")
+     // document.getElementById("madiv4").innerHTML="vous avez bien cliqué sur le bouton"
+     // Vous avez concaténé "vous avez bien clicke sur le bouton suivi du texte"
+     //document.getElementById("madiv4").innerHTML="vous avez bien cliqué sur le bouton  " + document.getElementById("test").value
+
+          // affichez ce qui a dans le champs texte. A chaque fois on affiche ce qui avant et le nouveau texte
+          // "oiseau" => "" + oiseau
+          // "tel" => oiseau tel
+
+    document.getElementById("madiv4").innerHTML=document.getElementById("madiv4").innerHTML+ " " +  document.getElementById("test").value
+ }
+
+
+document.getElementById("btest8").addEventListener("click", fdiv4)
+
+function fdiv4(){
+    document.getElementById("madiv4").innerHTML=document.getElementById("madiv4") + "  " + document.getElementById("test").value
+}
+
+/* Exercice 9
+1 CREER UN CHAMPS DE TYPE NUMBER AVEC VALEUR PAR DEFAUT A 0 AVEC L ID TEXTID1
+2 CREEZ UN BOUTTON AVEC L ID B10
+3 CREER UN BOUTON AVEC L ID ID10 LORSQUON CLIQUE QUI VA LANCER LA FONCTION FB10
+4 LA FONCTION VA AJOUTER 1 A LA VALEUR DU CHAMP TYPE NUMBER
+
+ EXemple:
+ Champ number : 0
+ click =>  1, 2, 3 ...
+*/
+
+document.getElementById("B10").addEventListener("click", FB10)
+
+function FB10(){
+    console.log("test")
+    document.getElementById("TEXTID1").value = parseInt(document.getElementById("TEXTID1").value) + 1
+    document.getElementById("TEXTID1").value = parseInt(document.getElementById("TEXTID1").value) + parseInt(document.getElementById("TEXTID2").value)
+}
+ /* Exercice 10
+ 1 Creer un champs texte avec l'identifiant prenom
+ 2 Creer un bouton s'inscrire
+ 2.1 Creer une div avec l'id dprenom
+ 3 Creer un evenement qui va se produire lorsque je vais presser (keyup) les touches sur
+le champs texte qui va déclencher la fonction fprenom
+ 4 la fonction fprenom elle va afficher dans la div dprenom le nom de la personne
+ */
+
+ document.getElementById("prenom").addEventListener("keyup", fprenom)
+
+ function fprenom(){
+     document.getElementById("dprenom").innerHTML=document.getElementById("prenom").value
+ }
