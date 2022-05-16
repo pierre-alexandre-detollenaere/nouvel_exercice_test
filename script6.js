@@ -170,3 +170,38 @@ document.getElementById("btest4").addEventListener("click", ftest4)
 function ftest4(){
     document.getElementById("test").value="le DERNIER texte nouveau"
 }
+
+/**Exercice 6
+ * Creer une div en html avec l identifiant madiv
+ * creer un evenement issu du dernier bouton au clic lançant la fonction fdiv
+ * la fonction fdiv affiche dans la console "vous avez bien cliqué sur le bouton"
+ * la fonction fdiv affiche dans la div "vous avez bien cliqué sur le bouton"
+ * la fonction fdiv affiche le contenu du champs texte
+ * 
+ */
+
+document.getElementById("btest5").addEventListener("click", fdiv)
+
+function fdiv(){
+    console.log("vous avez bien cliqué sur le bouton")
+    document.getElementById("madiv").innerHTML="vous avez bien cliqué sur le bouton"
+    document.getElementById("madiv").innerHTML=document.getElementById("test").value
+}
+
+/*Exercice 7
+ 1 Creez une div en html avec l identifiant madiv2
+ 2 Creez un evenemement issue du dernier bouton au click lancant la fonction fdiv2
+ 3 la fonction fdiv affiche dans la console vous avez bien cliqué sur le bouton
+ 4 la fonction fdiv affiche dans la div vous avez bien cliqué sur le bouton
+ 5 la fonction fdiv dans la div affiche le contenu du champs texte
+*/
+
+document.getElementById("btest6").addEventListener("click",fdiv2)
+
+function fdiv2(){
+    console.log("vous avez bien cliqué sur le bouton")
+    document.getElementById("madiv2").innerHTML="vous avez bien cliqué sur le bouton"
+    document.getElementById("madiv2").innerHTML=document.getElementById("test").value
+}
+
+
