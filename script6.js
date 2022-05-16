@@ -1,4 +1,5 @@
-/** 
+
+/** RECAPITULATIF
  * 1 Faire un lien entre un fichier html et JS
  * => Dans le fichier html on aura le script après body
  * <script type="texte/javascript" src="script6.js"></script>
@@ -75,3 +76,36 @@
  * 
  * 
  */
+
+/*
+Exercice :
+1 creer une variable nom contenant votre nom
+creer une variable prenom contentant votre prenom
+creer une variable age contenant votre age
+Afficher dans la console.log "Bienvenue je m'appelle " suivi de votre prenom et nom
+et j'ai suivi de votre age
+Creer une variable prix_article1 = 50
+Creer une variable prix_article2 = 80
+Creer une variable prix_article3 = prix_article1 + prix_article2
+Afficher dans la console.log "Le prix de l'article 1 est " prix_article1"
+Afficher dans la console.log "Le prix de l'article 2 est " prix_article2"
+Afficher dans la console.log "La somme des articles sera de : prix_article3"
+Mettre tout ce code dans une fonction ("debut") qui sera declenchee suite au clique sur un bouton
+que vous créerez qui aura l'identifiant "deb"
+
+*/
+ document.getElementById("deb").addEventListener("click", debut)
+
+function debut(){
+    nom="deto"
+    prenom="pierre"
+    age=31
+    console.log("Bienvenue je m'apelle " + prenom + nom + age)
+    prix_article1 = 50
+    prix_article2 = 80
+    prix_article3 = prix_article1 + prix_article2
+    console.log("Le prix de l'article 1 est " + prix_article1)
+    console.log("Le prix de l'article 2 est " + prix_article2)
+    console.log("La somme des articles sera de " + prix_article3)
+
+}
