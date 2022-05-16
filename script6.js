@@ -94,7 +94,11 @@ Mettre tout ce code dans une fonction ("debut") qui sera declenchee suite au cli
 que vous créerez qui aura l'identifiant "deb"
 
 */
+// appel de la fonction debut lors du click sur le bouton "deb"
  document.getElementById("deb").addEventListener("click", debut)
+
+ // appel de la fonction debut lors du load de la page
+window.addEventListener("load",debut)
 
 function debut(){
     nom="deto"
@@ -107,5 +111,62 @@ function debut(){
     console.log("Le prix de l'article 1 est " + prix_article1)
     console.log("Le prix de l'article 2 est " + prix_article2)
     console.log("La somme des articles sera de " + prix_article3)
+    document.getElementById("deb").addEventListener("click", ftest)
+}
 
+/** Exercice 2
+
+Ajouter un champs texte comprenant un identifiant "test"
+Lorsqu on clique sur le bouton précdemment créé on affiche dans le texte
+ayant l'identifiant "test" l'information
+"ce que je veux"
+
+*/
+ // 1 CREER UN EVENEMENT SUR LE BOUTON AU CLIQUE : ADDEVENTLISTENER
+ // 2 UI VA AFFICHER SUR LE CHAMPS TEXTE "ce que je veux" : FONCTION A CODER
+
+document.getElementById("deb").addEventListener("click", ftest)
+
+function ftest(){
+    document.getElementById("test").value="ce que je veux"
+}
+
+/** 
+ * EXERCICE 3
+ * 1 CREER UN NOUVEAU BOUTON AVEC L IDENTIFIANT btest
+ * 2 CREER UN EVENEMENT SUR LE BOUTON AU CLIC QUI VA DECLENCHER LA FONCTION ftest2
+ * 3 LA FONCTION VA FAIRE EN SORTE QUE LE TEXTE avec l'identifiant "test" 
+ * recoivent en valeur le texte "nouveau texte !"
+*/
+
+document.getElementById("btest").addEventListener("click",ftest2)
+
+function ftest2(){
+    document.getElementById("test").value="nouveau texte !"
+}
+
+/*Exercice 4
+1 CREEZ UN NOUVEAU BOUTON AVEC L IDENTIFIANT btest3
+2 CREEZ UN EVENEMENT SUR LE BOUTTON AU CLIC QUI VA DECLENCHER LA FONCTION ftest3
+3 LA FONCTION VA FAIRE EN SORTE QUE LE TEXTE avec l'identifiant "test" recoivent en valeur
+le texte "le texte nouveau !"
+*/
+
+document.getElementById("btest3").addEventListener("click", ftest3)
+
+function ftest3(){
+    document.getElementById("test").value="le texte nouveau !"
+}
+
+/*Exercice 5
+1 CREEZ UN NOUVEAU BOUTON AVEC L IDENTIFIANT btest4
+2 CREEZ UN EVENEMENT SUR LE BOUTTON AU CLIC QUI VA DECLENCHER LA FONCTION ftest4
+3 LA FONCTION VA FAIRE EN SORTE QUE LE TEXTE avec l'identifiant "test" recoivent en valeur
+le texte "le DERNIER texte nouveau !"
+*/
+
+document.getElementById("btest4").addEventListener("click", ftest4)
+
+function ftest4(){
+    document.getElementById("test").value="le DERNIER texte nouveau"
 }
