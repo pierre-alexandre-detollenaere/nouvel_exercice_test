@@ -284,9 +284,9 @@ le champs texte qui va déclencher la fonction fprenom
  votre prenom doit faire moins de 10 caracteres"
  */
 
- document.getElementById("prenom").addEventListener("keyup", fprenom)
+/*document.getElementById("prenom").addEventListener("keyup", fprenom)
 
- function fprenom(){
+function fprenom(){
     document.getElementById("dprenom").innerHTML=document.getElementById("prenom").value
     taille_prenom=document.getElementById("dprenom").innerHTML=document.getElementById("prenom").value.length
     // on stocke dans la variable taille_prenom le nombre de caractères
@@ -299,8 +299,35 @@ le champs texte qui va déclencher la fonction fprenom
     if (taille_prenom>3 && taille_prenom<10) {
         document.getElementById("dprenom").innerHTML="Votre prénom est conforme"
     }
- 
+}*/
+
+/* 1 Creez un champs texte avec l'identifiant nom
+ 2 CReez une div avec l'id dnom
+ 3 Creez un evenement qui va se produire lorsque je vais presser (keyup) les touches sur 
+ le champs texte qui va declencher la fonction fnom 
+ 5 la fonction fnom elle va afficher dans la div dnom le nombre de caractere du
+ nom de la personne (length)
+ 6 Si le nombre de caractere est inferieur à 3 afficher dans la div "Attention :
+ votre prenom doit faire plus de 3 caracteres"
+ 7 Si le nombre de caractere est superieur à 10  afficher dans la div "Attention :
+ votre prenom doit faire moins de 10 caracteres"
+*/
+
+document.getElementById("prenom").addEventListener("keyup", fnom)
+
+function fnom(){
+    taille_nom=document.getElementById("dnom").innerHTML=document.getElementById("prenom").value.length
+    if (taille_nom<3){
+        document.getElementById("dnom").innerHTML="Attention : votre prenom doit faire plus de 3 caracteres"
+    }
+        if (taille_nom>10){
+        document.getElementById("dnom").innerHTML="Attention : votre prenom doit faire moins de 10 caracteres"
+    }
+        if (taille_nom>3 && taille_nom<10) {
+            document.getElementById("dnom").innerHTML="Votre prénom est conforme"
+        }
 }
+
 
 
 
