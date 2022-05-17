@@ -1,4 +1,4 @@
-/**
+/** (détail des exercices dans le "script6.js")
  * Les variables : typeof(variable)
  * Booleen
  * Tableau

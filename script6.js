@@ -489,6 +489,30 @@ remise=calcul_20(100)
 console.log(remise)
 
 
+// LES BOOLEENS
+// LA FONCTION VA RENVOYER VRAI OU FAUX
+
+// check_majeur // vrai la personne est majeur soit c'est faux
+info=true;
+info2=false;
+
+console.log(info)
+console.log(info2)
+
+// fonction qui vérifie si on est majeur ou pas : revoie true si on est majeur
+
+function check_age(age){
+    if(age>17){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+a=check_age(50)
+console.log("check_age=50"+a)
+
 
 
 
