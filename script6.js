@@ -513,7 +513,29 @@ function check_age(age){
 a=check_age(50)
 console.log("check_age=50"+a)
 
+// fonction de verifier si un nombre est superieur à 0
+// fonction de verifier si un nombre est superieur est pair
 
+function verif(nb){
+    if(nb>0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+b=verif(-5)
+console.log(b)
 
+function check_pair(nb){
+    if(nb%2==0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
 
+c=check_pair(6)
+console.log(c)
 
