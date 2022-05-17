@@ -680,7 +680,22 @@ let compt=tsomme(15)
 console.log(compt)
 console.log("----------FIN")
 
+/*Ex:  une fonction qu on pourra appeller "tfactorielle", qui va faire la multiplication des nombre
+entre 1 et le nombre choisi
+Ex : nombre choisi 5 : 0*1*2*3*4*5
+Factorielle 5 : 1*2*3*4*5
+*/
 
-
+function tfactorielle(nb3){
+    let compteur3=1
+    for (let i=1;i<nb3;i++){
+        compteur3=compteur3*i
+        console.log(i)
+        console.log(compteur3)
+    }
+    return compteur3
+}
+let compt3=tfactorielle(10)
+console.log(compt3)
 
 
