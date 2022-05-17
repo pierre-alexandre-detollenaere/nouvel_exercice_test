@@ -698,4 +698,45 @@ function tfactorielle(nb3){
 let compt3=tfactorielle(10)
 console.log(compt3)
 
+// 1 Creez un tableau de 5 valeurs : Creez une fonction permettant d'inverser
+// les deux premieres valeurs d'un tableau
+// 2 Afficher un tableau passé en parametre dans une fonction
+// 3 Creez un tableau de 5 valeurs : Creez une fonction permettant de 
+// trouver la valeur max du tableau
+// 4 Creez un tableau de 5 valeurs : Creez une fonction permettant de 
+// trouver la position correspondant à la valeur max du tableau
+// 5 Creez un tableau de 5 valeurs : Creez une fonction permettant de 
+// retourner le nombre de case du tableau
+// 6 Creez un tableau de 5 valeurs : Creez une fonction permettant de 
+// retourner le nombre de case du tableau
+// 7 Creez un tableau de 5 valeurs : Creez une fonction permettant de 
+// retourner le somme des cases du tableau
+
+1.
+
+sel=10
+sucre=20
+
+save_sel=sel // on a sauvegardé le sel
+sel=sucre // le sucre on le met dans le sel
+sucre=save_sel // a perdu le sel mais on l'a dans le save_sel
+
+console.log("----------DEBUT")
+let tab4=[3,4,5,6,7]
+console.table(tab4)
+
+function inv_tab(table){ // on a besoin d un tableau donc on en a besoin en parametre
+
+    // Afficher la case 0
+    // Afficher la case 1
+    console.table(table[0]);
+    console.log(table[1]);
+    save0=table[0];
+    table[0]=table[1];
+    table[1]=save0;
+    return table
+}
+tab5=inv_tab(tab4)
+console.table(tab5)
+
 
