@@ -807,7 +807,25 @@ function sup_tab(montab){
         if (valeur < montab[i] ){
             valeur=montab[i]
         }
+            return valeur
 }
+let nbmax=sup_tab(tab_nb)
+console.log("-----NBMAX : " +   nbmax)
+
+
+//renvoyer la 1ere valeur supérieure à celle définie en paramètre
+// il faut PARCOURIR BOUCLER (FOR) SUR LE TABLEAU
+let tab_nb2=[34,23,60,45,67,78]
+
+function sup_tab2(montab){
+    for (let i=0; i<montab.length; i++)
+        // JE COMPARE AVEC LE NOMBRE LE PLUS GRAND TROUVE AVEC CELUI EN COURS
+        if (montab[i] > 49 ){ // 34 EST COMPARE AVEC 198 IL PASSE
+            return montab[i] // VALEUR = 198
+        }
+}
+let nbmax2=sup_tab2(tab_nb2)
+console.log("------NBMAX : " + nbmax2)
 
 
 
