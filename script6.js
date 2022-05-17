@@ -388,3 +388,108 @@ function fmult(){
     document.getElementById("dmult").innerHTML=document.getElementById("dmult").innerHTML + " " + i
     }
 }
+
+// lorsque je vais ecrire un nombre dans le champs tva
+document.getElementById("tva").addEventListener("keyup", ftva)
+
+function ftva(){
+    //val_tva=document.getElementById("TTC").value*1.2
+    val_tva=calcul_TTC(document.getElementById("tva").value)
+    // dans la div dtva j'écris la valeur du PRIX TTC
+    document.getElementById("dtva").innerHTML=val_tva
+}
+
+// fonction qui ne renvoie rien
+function test2(){
+    console.log("j affiche des choses")
+}
+test2()
+// fonction qui renvoie une valeur elle doit être récupérée par une variable
+
+function test(){
+    // la fonction test renvoie la valeur 1
+    return "Bonjour"
+}
+// test() va executer la fonction => 1
+// a va recevoir ce 1
+a=test();
+console.log(a)
+
+// fonction calcul_TTC qui va renvoyer le priix * 1.2 pour renvoyer le prix TTC
+// fonction calcul_TVA qui va renvoyer le priix * 0.2 pour renvoyer le prix de la taxe
+// fonction calcul_reduc qui va renvoyer le priix * 0.9 pour renvoyer le prix réduit de 10%
+
+
+// fonction calcul de reduc qui va multiplier le prix * la reduction qui va etre demandée
+function calcul_reduc(param_prix , param_reduc){
+    result=param_prix*param_reduc
+    return result
+}
+// la fonction calcul_reduc est appelée
+le_prix=calcul_reduc(300,1.50)
+console.log("300*1.50=" + le_prix)
+
+// fonction addition qui renvoie le resultat de l'addition de deux nombres
+function addition(param_nb1, param_nb2){
+    somme=param_nb1+param_nb2
+    return somme
+}
+
+total=addition(50,25)
+console.log(total)
+
+
+// déclarer un prix à 100
+
+function calcul_TTC(param_prix){
+    // elle créée une variable prix_ttc qui contient le prix(100) * 1.2 et elle renvoie (120)
+    prix_ttc= param_prix*1.2;
+    return prix_ttc
+}
+// la fonction calcul_ttc est appelée
+le_prix=calcul_TTC(300)
+console.log(le_prix)
+
+// la fonction calcul_ttc est appelée
+le_prix=calcul_TTC(100)
+console.log(le_prix)
+
+// la fonction calcul_ttc est appelée
+le_prix=calcul_TTC(50)
+console.log(le_prix)
+
+// la fonction calcul_ttc est appelée
+le_prix=calcul_TTC(500)
+console.log(le_prix)
+
+
+// dans les parenthèses on a les paramètres : des input : qu est ce qu on a besoin : il me faut le prix
+// dans le return c'est le résultat à votre question
+function calcul_tva(param_prix){
+    montant_tva=param_prix*0.9
+    return montant_tva
+}
+la_tva=calcul_tva(300)
+console.log(la_tva)
+
+//fonction calcul_reduc_10 qui va renvoyé le prix * 0.9 pour renvoye le Prix reduit de 10%
+function calcul_reduc_10(param_prix){
+    reduc_10=param_prix*0.9
+    return reduc_10
+}
+reduc=calcul_reduc_10(100)
+console.log(reduc)
+
+//la réduction de 20% *0.8
+function calcul_20(param_prix){
+    remise_20=param_prix*0.8
+    return remise_20
+}
+remise=calcul_20(100)
+console.log(remise)
+
+
+
+
+
+
