@@ -740,3 +740,38 @@ tab5=inv_tab(tab4)
 console.table(tab5)
 
 
+// afficher le tableau
+// 2 methodes pour afficher un tableau
+// tab4=[1,2,3,4,5]
+// 1 METHODE
+// BOUCLE FOR
+// M1
+for (const element of tab4 ){
+    console.log(element)
+} 
+// M2
+for (let i=0; i<tab4.length; i++){
+    console.log(tab4[i])
+}
+
+console.log(tab4[0])
+console.log(tab4[1])
+console.log(tab4[2])
+console.log(tab4[3])
+console.log(tab4[4])
+
+// affiche_tab(tab4)
+// afficher mon tableau
+//M1
+function affiche_tab(tab4){
+    for (const element of tab4){
+        console.log(element)
+    }
+}
+console.log("------------affiche_tab")
+affiche_tab(tab4)
+console.log("------------affiche_tab fin ")
+//M2
+for (let i=0; i<tab4.length; i++){
+    console.log(tab4[i])
+}
