@@ -514,7 +514,32 @@ a=check_age(50)
 console.log("check_age=50"+a)
 
 // fonction de verifier si un nombre est superieur à 0
+function positif(nb){
+    if (nb > 0){
+        return true
+    }
+    if (nb < 0) {
+        return false
+    }
+}
+a=positif(15)
+console.log("positif:"+a)
+
+
+
 // fonction de verifier si un nombre est superieur est pair
+function check_pair( nb ) {
+    if (nb % 2 == 0){
+        true
+    }
+    else {
+        return false;
+    }
+}
+a=check_pair(15)
+console.log("pair:"+a)
+
+
 
 function verif(nb){
     if(nb>0){
@@ -538,4 +563,34 @@ function check_pair(nb){
 
 c=check_pair(6)
 console.log(c)
+
+// portée des variables
+// const : à utiliser pour les variables qui ne doivent pas changer (constante ça empêche toute modification possible)
+// let : Let est à utiliser en priorité, A utiliser mais on protège nos blocs de fonction, de if, de boucle 
+// la portée est limitée au bloc, 1 let n'est défini que dans son bloc
+// let autorise la modification de la variable
+// var : priorité 3, modifie la variable, valeur par défaut, en général on ne l'utilise pas
+
+const mavariable="ce que je veux" // variable qui ne peut plus être modifiée
+//mavariable="autre chose"
+console.log(mavariable)
+
+const variable2="nouvelle variable"
+//variable2="c'est nouveau!"; Assignment to constant variable at script6.js:575:10
+console.log(variable2)
+
+// age à 45 ans
+// avec let on ne peut pas redeclarer une variable
+let age=45;
+//let age=46; Identifier 'age' has already been declared (at script6.js:581:5)
+console.log(age);
+
+function test20(){
+    console.log(" l age est : " + age);
+}
+test20()
+
+
+
+
 
