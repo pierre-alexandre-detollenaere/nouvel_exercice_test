@@ -549,8 +549,8 @@ function verif(nb){
         return false;
     }
 }
-b=verif(-5)
-console.log(b)
+b1=verif(-5)
+console.log(b1)
 
 function check_pair(nb){
     if(nb%2==0){
@@ -581,14 +581,63 @@ console.log(variable2)
 
 // age à 45 ans
 // avec let on ne peut pas redeclarer une variable
-let age=45;
-//let age=46; Identifier 'age' has already been declared (at script6.js:581:5)
-console.log(age);
+let age1=45;
+//let age1=46; Identifier 'age' has already been declared (at script6.js:581:5)
+console.log(age1);
 
 function test20(){
     console.log(" l age est : " + age);
 }
 test20()
+
+// on declare nos variables au debut du bloc avec const ou let
+
+// var  abc="test issue du code general"
+
+let b="test issue du code general"
+ let variablestest="testvariablestest"
+function test23(){
+    //console.log(variablestest)
+    let variablestest="test_fonction"
+    console.log(variablestest)
+    let b="test issue de la fonction test23" // abc est definit avec let et n existe que dans le bloc
+    // abc="test issue de la fonction test23" // abc est definit avec let et n existe que dans le bloc
+    console.log(b)
+}
+test23()
+console.log(b)
+
+// string : "" , number : sans "", booleen : true , false
+// tableau [ 23 , 56, 78, 90]
+//           0    1   2   3
+let tab=[23,56,78,90]
+console.table(tab)
+
+let tab2=[0,1,2,3,4,5]
+console.table(tab2)
+
+// creez un tableau "votre prenom" , votre nom et votre age et affichez le
+// afficher une case n2 précise du tableau
+let new_tab=["votre prenom", "votre nom", "votre âge"]
+console.log(new_tab[2])
+
+// boucle sur un tableau
+
+for (const element of tab ){
+    console.log(element)
+}
+
+// creer un tableau de 5 valeurs, afficher le tableau console.tab
+// afficher la cellule 3 et 5 du tableau
+// boucler pour afficher tout le tableau
+
+let tab3=[2,3,4,5,6]
+console.table(tab3)
+console.log(tab3[3,5])
+for (const element of tab3){
+    console.log(element)
+}
+
 
 
 
