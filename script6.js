@@ -775,3 +775,42 @@ console.log("------------affiche_tab fin ")
 for (let i=0; i<tab4.length; i++){
     console.log(tab4[i])
 }
+
+// creer une fonction prenant en paramettre deux nombres : nb1 , nb2
+// renvoyer uniquement le nombre le plus grand des deux
+// EX : sup(45 , 67) => 67
+
+function sup(nb1,nb2){
+    // ON COMPARE LES VARIABLES
+    if (nb1<nb2){ // NB2 SERA SUPERIEUR
+        return nb2
+    }
+    else{   // NB1 SERA SUPERIEUR
+        return nb1
+    }
+}
+
+superieur=sup(34,56)
+console.log(superieur)
+
+// on declare nos variables au debut du bloc avec const ou let
+let tab_nb=[34,23,198,45,67,78]
+//          0   1  2   3  4 5
+function sup_tab(montab){
+
+    valeur=tab_nb[0] //34
+
+    // COMPARER(IF) tous les nombres
+    // il faut PARCOURIR BOUCLER (FOR) SUR LE TABLEAU
+    for (let i=0; i<montab.length; i++)
+        // JE COMPARE AVEC LE NOMBRE EN COURS D AVANT
+        if (valeur < montab[i] ){
+            valeur=montab[i]
+        }
+}
+
+
+
+
+
+
