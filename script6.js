@@ -639,6 +639,47 @@ for (const element of tab3){
 }
 
 
+// LES ALGORITHMES :
+
+// Variables
+// condition
+// boucles
+// fonctions
+
+// EXERCICE : AVANT DE CODER EN LANGAGE JS
+// CODER EN FRANCAIS
+
+/*
+Ex : Faites une fonction permettant de faire une addition entre 2 nombres 
+
+// fonction elle a besoin de de eux parametres en variables
+// elle va avoir besoin d un parametre en retour
+
+function add ( nb1 , nb2 ){
+    result=nb1 + nb2
+    return result
+}
+
+Ex:  une fonction qu on pourra appeller "tsomme", qui va faire la somme des nombre
+entre 0 et le nombre choisi
+Ex : nombre choisi 5 : 0+1+2+3+4+5
+
+*/
+console.log("----------DEBUT")
+function tsomme(nb) { // nb est le parametre d exemple
+    // creer un compteur c est une variable qui demarre à 0
+    let compteur=0
+    for(let i=0; i<nb; i++){
+        compteur=compteur+i // compteur = le nombre i + compteur d avant
+        console.log(i)
+        console.log(compteur)
+    }
+    return compteur
+}
+let compt=tsomme(15)
+console.log(compt)
+console.log("----------FIN")
+
 
 
 
